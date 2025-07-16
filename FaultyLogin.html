@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Something went wrong :(</title>
+  <style>
+    b{
+     text-align: center;
+    }
+  </style>
+</head>
+<body>
+<b>Login</b>
+<p>Something went wrong while attempting to login. Please ensure you've only entered letters and numbers.</p>
+<form method="post" action = "http://localhost:5000/login">
+  <input id = "username" name="Username" required minlength="8" maxlength="16" type="text">
+  <input id="password" name="Password" type="password" required minlength="8" maxlength="16">
+  <input type="submit" value="Login">
+</form>
+  <b>OR</b>
+  <b>Create Account</b>
+<form method="post" action = "http://localhost:5000/create_account">
+  <input id = "createUsername" name="Username" required minlength="8" maxlength="16" type="text">
+  <input id="createPassword" name="Password" type="password" required minlength="8" maxlength="16">
+  <input type="submit" value="Create Account!">
+</form>
+</body>
+</html>

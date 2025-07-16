@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+  <script src="jquery-3.7.1.js"></script>
+  <script type="text/javascript">
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const createUsername = document.getElementById("createPassword");
+    const createPassword = document.getElementById("createUsername");
+
+  username.addEventListener(
+    "input",
+    function (a) {
+        let val = a.target.value;
+        return val.replace(/[^A-Za-z\s]/gi, "");
+    }
+    password.addEventListener(
+    "input",
+    function (b) {
+        let val = b.target.value;
+        return val.replace(/[^A-Za-z\s]/gi, "");
+    }
+    createUsername.addEventListener(
+    "input",
+    function (c) {
+        let val = c.target.value;
+        return val.replace(/[^A-Za-z\s]/gi, "");
+    }
+    createPassword.addEventListener(
+    "input",
+    function (d) {
+        let val = d.target.value;
+        return val.replace(/[^A-Za-z\s]/gi, "");
+    }
+);
+  </script>
+  <style>
+    b{
+     text-align: center;
+    }
+  </style>
+</head>
+<body>
+<b>Login</b>
+<form method="post" action = "http://localhost:5000/login">
+  <input id = "username" name="Username" required minlength="8" maxlength="16" type="text">
+  <input id="password" name="Password" type="password" required minlength="8" maxlength="16">
+  <input type="submit" value="Login">
+</form>
+  <p>OR</p>
+  <b>Create Account</b>
+<form method="post" action = "http://localhost:5000/create_account">
+  <p>Both username and password must be between 8 and 12 characters long, and not contain any special characters.</p>
+  <input id = "createUsername" name="Username" required minlength="8" maxlength="16" type="text">
+  <input id="createPassword" name="Password" type="password" required minlength="8" maxlength="16">
+  <input type="submit" value="Create Account!">
+</form>
+</body>
+</html>

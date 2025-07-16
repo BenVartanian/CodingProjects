@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<b>Login</b>
+
+<form method="post" action = "http://localhost:5000/login">
+  <input id = "username" name="Username" required minlength="8" maxlength="16" type="text">
+  <input id="password" name="Password" type="password" required minlength="8" maxlength="16">
+  <input type="submit" value="Login">
+</form>
+  <p>OR</p>
+  <b>Create Account</b>
+<form method="post" action = "http://localhost:5000/create_account">
+  <p>Please choose a different username. Ensure your username is between 8 and 12 characters with no special characters included.</p>
+  <input id = "createUsername" name="Username" required minlength="8" maxlength="16" type="text">
+  <input id="createPassword" name="Password" type="password" required minlength="8" maxlength="16">
+  <input type="submit" value="Create Account!">
+</form>
+</body>
+</html>
